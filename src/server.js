@@ -7,6 +7,7 @@ const connection = require("./connection/connection")
 const app = express()
 const routes = require("./routes/routes.js")
 
+let port = process.env.PORT || '5000';
 
 app.use(session({ 
 	secret: 'secreto',
@@ -48,6 +49,6 @@ dialectOptions: {
 */
  
  
-app.listen(7000, (req, res)=>{
+app.listen(port, (req, res)=>{
 	console.log('server run in port 8000')
 })
